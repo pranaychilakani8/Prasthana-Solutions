@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the temperature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aA-wt-SU3">
+                                <rect key="frame" x="102" y="409" width="188" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="convertTemp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cG7-8Z-MJo"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-Xa-5S3">
+                                <rect key="frame" x="94" y="556" width="188" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Temperature Converter" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoL-KA-phI">
+                                <rect key="frame" x="110" y="105" width="180" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-rK-nhA">
+                                <rect key="frame" x="154" y="467" width="85" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="9Jo-Kf-lnV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                <connections>
+                                    <action selector="convertTemp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpl-o7-Cut"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5aA-wt-SU3" firstAttribute="trailing" secondItem="zMG-Xa-5S3" secondAttribute="trailing" id="3Hb-ij-06s"/>
+                            <constraint firstItem="hf6-rK-nhA" firstAttribute="top" secondItem="5aA-wt-SU3" secondAttribute="bottom" constant="21" id="9Kx-Rc-rvg"/>
+                            <constraint firstItem="zMG-Xa-5S3" firstAttribute="top" secondItem="hf6-rK-nhA" secondAttribute="bottom" constant="57" id="Hoo-jC-Dia"/>
+                            <constraint firstItem="hf6-rK-nhA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="S88-Pd-W9k"/>
+                            <constraint firstItem="5aA-wt-SU3" firstAttribute="centerX" secondItem="hf6-rK-nhA" secondAttribute="centerX" id="TdB-US-TXK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5aA-wt-SU3" secondAttribute="trailing" constant="111" id="eSu-KL-E9f"/>
+                            <constraint firstItem="5aA-wt-SU3" firstAttribute="leading" secondItem="zMG-Xa-5S3" secondAttribute="leading" id="qFS-8B-FTv"/>
+                            <constraint firstItem="5aA-wt-SU3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="syf-C4-h5U"/>
+                            <constraint firstItem="5aA-wt-SU3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="tf5-jJ-nEu"/>
+                            <constraint firstItem="5aA-wt-SU3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tt2-vv-GSU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zMG-Xa-5S3" secondAttribute="bottom" constant="188" id="vp9-u6-NjO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="convertTemp" destination="hf6-rK-nhA" id="oDx-gp-8C1"/>
+                        <outlet property="resultLabel" destination="zMG-Xa-5S3" id="vMv-uh-4cG"/>
+                        <outlet property="tempText" destination="5aA-wt-SU3" id="W1e-34-OlC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
