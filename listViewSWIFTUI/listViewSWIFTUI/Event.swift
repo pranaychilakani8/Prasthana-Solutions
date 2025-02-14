@@ -36,10 +36,7 @@ func groupEventsByMonthYear(events: [Event]) -> [String: [Event]] {
         if let date = dateFormatter.date(from: event.date) {
             dateFormatter.dateFormat = "MMMM yyyy"
             let monthYear = dateFormatter.string(from: date)
-            if groupedEvents[monthYear] == nil {
-                groupedEvents[monthYear] = []
-            }
-            groupedEvents[monthYear]?.append(event)
+            groupedEvents[monthYear, default: []].append(event)
         }
     }
     return groupedEvents
